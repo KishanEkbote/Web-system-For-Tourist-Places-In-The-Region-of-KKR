@@ -4,7 +4,7 @@ creating a dynamic tourism environment that benefits both visitors and the local
 user-friendly digital platform consolidates essential information for travelers, addressing challenges such as fragmented information, limited online visibility, and insufficient marketing.
 
 # FEATURES
-1.Real-Time Updates: Stay informed with the latest information and updates about attractions and events.**
+1.Real-Time Updates: Stay informed with the latest information and updates about attractions and events.
 2.Customized Itineraries: Plan personalized travel experiences tailored to individual preferences.
 3.Increased Local Involvement: Engage with local communities and support local businesses.
 4.Cultural and Historical Heritage: Discover the rich cultural and historical heritage of Kalyana Karnataka.
