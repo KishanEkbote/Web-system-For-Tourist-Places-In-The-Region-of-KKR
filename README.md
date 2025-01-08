@@ -5,8 +5,11 @@ user-friendly digital platform consolidates essential information for travelers,
 
 # FEATURES
 1.Real-Time Updates: Stay informed with the latest information and updates about attractions and events.
+<br>
 2.Customized Itineraries: Plan personalized travel experiences tailored to individual preferences.
+<br>
 3.Increased Local Involvement: Engage with local communities and support local businesses.
+<br>
 4.Cultural and Historical Heritage: Discover the rich cultural and historical heritage of Kalyana Karnataka.
 
 # Goals
