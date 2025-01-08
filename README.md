@@ -1,5 +1,5 @@
-# KALYAN KARNATAKA REGION (WEB SYSTEM FOR TOURIST PLACES IN THE REGION OF KKR)
-
+# WEB SYSTEM FOR TOURIST PLACES IN THE REGION OF KKR 
+        # By- Kishan Ekbote  
 The Kalyana Karnataka Tourism initiative is designed to connect tourists with the lesser-known attractions of Kalyana Karnataka, 
 creating a dynamic tourism environment that benefits both visitors and the local population. This comprehensive, 
 user-friendly digital platform consolidates essential information for travelers, addressing challenges such as fragmented information, limited online visibility, and insufficient marketing.
