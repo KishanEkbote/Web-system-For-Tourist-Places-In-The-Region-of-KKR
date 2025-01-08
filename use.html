@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accommodations in Yadgir</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #007BFF;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    .accommodation {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); /* 3 cards per row */
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+    }
+
+    .card h2 {
+      background-color: #3f9dd4;
+      color: white;
+      margin: 0;
+      padding: 10px;
+    }
+
+    .card p {
+      padding: 0 15px 15px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px 0;
+      background-color: #007BFF;
+      color: white;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    @media screen and (max-width: 768px) {
+      .accommodation {
+        grid-template-columns: repeat(2, 1fr); /* 2 cards per row on smaller screens */
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .accommodation {
+        grid-template-columns: 1fr; /* 1 card per row on small screens */
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Accommodations in Yadgir</h1>
+  </header>
+  <main>
+    <section class="accommodation">
+      <div class="card">
+        <img src="Images/KKR Region/Klb/hotel.jpg" alt="Hotel Ashraya">
+        <h2>Hotel Ashraya & Tiffanys</h2>
+        <p><strong>Location:</strong> New Bus Stop, Chittapur Road, Yadgir</p>
+        <p><strong>Contact:</strong> (08473) 252800, 252900</p>
+      </div>
+      <div class="card">
+        <img src="Images/KKR Region/Klb/hotel.jpg" alt="Hotel Mahalaxmi">
+        <h2>Hotel Mahalaxmi</h2>
+        <p><strong>Location:</strong> Railway Station Road, Gulbarga Road</p>
+        <p><strong>Contact:</strong> (08473) 252638</p>
+      </div>
+      <div class="card">
+        <img src="Images/KKR Region/Klb/hotel.jpg" alt="Hotel Abiman">
+        <h2>Hotel Abiman & Such Sagar</h2>
+        <p><strong>Location:</strong> Bus Stand Circle, Hyderabad Road</p>
+        <p><strong>Contact:</strong> (08473) 250207</p>
+      </div>
+      <div class="card">
+        <img src="Images/KKR Region/Klb/hotel.jpg" alt="Hotel Preetam">
+        <h2>Hotel Preetam Restaurant</h2>
+        <p><strong>Location:</strong> Main Bus Station Road</p>
+        <p><strong>Contact:</strong> (08473) 252468</p>
+      </div>
+      <div class="card">
+        <img src="Images/KKR Region/Klb/hotel.jpg" alt="Hotel Suvareshwar">
+        <h2>Hotel Suvareshwar & Sri Ganesh</h2>
+        <p><strong>Location:</strong> Main Bus Station Road</p>
+        <p><strong>Contact:</strong> (08473) 252468</p>
+      </div>
+    </section>
+  </main>
+  <img class="leaflet-image-layer leaflet-zoom-animated" src="https://karnatakatourism.org/wp-content/uploads/2022/09/Group-812-3.png" alt="" style="z-index: 1; transform: translate3d(0px, 0px, 0px); width: 495px; height: 772px;">
+  <footer>
+    <p>&copy; 2024 Yadgir Accommodations. All rights reserved.</p>
+  </footer>
+</body>
+</html>

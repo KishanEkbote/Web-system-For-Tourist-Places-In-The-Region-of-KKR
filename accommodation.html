@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accommodation Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #f3f4f6;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        /* Header */
+        .header {
+            background-image: url('Images/back.PNG');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            color: #fff;
+            padding: 50px 10px;
+        }
+        
+        .header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 1.2em;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 30px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .cta-button1 {
+            display: inline-block;
+            margin-top: 50px;
+            padding: 10px 30px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        
+        /* Rooms Section */
+        .rooms-section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+        
+        .rooms-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #007bff;
+        }
+        
+        .room-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        
+        .room {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            max-width: 300px;
+            text-align: left;
+        }
+        
+        .room img {
+            width: 100%;
+            display: block;
+        }
+        
+        .room h3 {
+            padding: 10px;
+            font-size: 1.5em;
+            color: #333;
+        }
+        
+        .room p {
+            padding: 0 10px 10px;
+            color: #007bff;
+        }
+        
+        /* Amenities Section */
+        .amenities-section {
+            background-color: #f9fafb;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        
+        .amenities-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #007bff;
+        }
+        
+        .amenities-section ul {
+            list-style: none;
+            font-size: 1.2em;
+            color: #555;
+        }
+        
+        .amenities-section li {
+            padding: 10px 0;
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #f3f4f6;
+        }
+        
+    </style>
+    <!-- Header Section -->
+    <header class="header">
+        <h1>Welcome to Accommodation Section </h1>
+        <p>Experience the luxury and comfort you deserve!</p> 
+        <a href="#rooms" class="cta-button">Explore Rooms</a>
+        <a href="#rooms" class="cta-button">Explore Hotel </a>
+    </header>
+
+    <!-- Rooms Section -->
+    <section id="rooms" class="rooms-section">
+        <h2>Our Rooms</h2>
+        <div class="room-gallery">
+            <div class="room">
+                <img src="Images/KKR Region/Klb/accomodation_details_klb.png" alt="Room 1">
+                <h3>Kalaburagi Hotel Details </h3>
+            </div>
+            <div class="room">
+                <img src="Images/KKR Region/Klb/hotel.jpg" alt="Room 2">
+                <h3>Family Room</h3>
+            </div>
+            <div class="room">
+                <img src="Images/KKR Region/Klb/hotel1.jpg" alt="Room 3">
+                <h3>Single Room</h3>
+            </div>
+            <div class="room">
+                <img src="Images/Hotels/hh3.jpg" alt="Room 3">
+                <h3>Lexury Rooms</h3>
+            </div>
+        </div>
+        </div>
+
+    <section id="rooms" class="rooms-section">
+        <h2>Hotel Details </h2>
+        <div class="room-gallery">
+            <div class="room">
+                <img src="Images/Hotels/Hotel VKG.jpg" alt="Room 1">
+                <h3>Hotel VKG</h3>
+                <p><strong>Location:</strong> New Bus Stop, Sadem Road, kalaburagi</p>
+                <p><strong>Contact:</strong> (08473) 252800, 252900</p>
+            </div>
+            <div class="room">
+                <img src="Images/Hotels/grND HOTEL.jpg" alt="Room 2">
+                <h3>Hotel GRAND</h3>
+                <p><strong>Location:</strong> New Bus Stop, Chittapur Road, Yadgir</p>
+                <p><strong>Contact:</strong> (08473) 252800, 252900</p>
+            </div>
+            <div class="room">
+                <img src="Images/Hotels/hotel_lotus_park.jpg" alt="Room 3">
+                <h3>Hotel Lotus</h3>
+                <p><strong>Location:</strong> Railway Station Road, Gulbarga Road</p>
+                <p><strong>Contact:</strong> (08473) 252638</p>
+            </div>
+            <div class="room">
+                <img src="Images/Hotels/Hotel_ANS.jpg" alt="Room 3">
+                <h3>Hotel Mahalaxmi</h3>
+          <p><strong>Location:</strong> New Bus Stop, Sadem Road, kalaburagi</p>
+          <p><strong>Contact:</strong> (08473) 252800, 252900</p>
+            </div>
+        </div>
+        </div>
+    </section>
+</body>
+</html>

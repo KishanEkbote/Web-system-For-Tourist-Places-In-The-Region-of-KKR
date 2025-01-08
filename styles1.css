@@ -1,0 +1,49 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    color: #333;
+}
+
+#planner {
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+#planner form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#planner label, input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+#planner button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Map Section */
+#map-container {
+    padding: 20px;
+    text-align: center;
+}
+
+#map {
+    height: 500px;
+    width: 100%;
+    border: 2px solid #333;
+}

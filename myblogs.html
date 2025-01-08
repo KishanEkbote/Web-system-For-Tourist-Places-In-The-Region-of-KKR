@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blogs</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header, footer {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        header nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        header nav ul li {
+            display: inline;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        header nav ul li a:hover {
+            color: #d1ecff;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        section {
+            margin-bottom: 20px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #007bff;
+        }
+
+        .blog-card {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .blog-card img {
+            max-width: 100%;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            main {
+                padding: 10px;
+            }
+
+            header nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Blogs</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="myblogs.html">My Blogs</a></li>
+                <li><a href="index.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="blogs">
+            <h2>Your Blogs</h2>
+            <div id="blogs-container">
+                <!-- Blogs will be dynamically populated -->
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Simulate fetching blogs from a source (localStorage or API)
+        const blogs = JSON.parse(localStorage.getItem('blogs')) || [];
+
+        const blogsContainer = document.getElementById('blogs-container');
+
+        if (blogs.length === 0) {
+            const noBlogsMessage = document.createElement('p');
+            noBlogsMessage.textContent = "You haven't published any blogs yet.";
+            blogsContainer.appendChild(noBlogsMessage);
+        } else {
+            blogs.forEach(blog => {
+                const blogCard = document.createElement('div');
+                blogCard.classList.add('blog-card');
+
+                const blogTitle = document.createElement('h3');
+                blogTitle.textContent = blog.title;
+
+                const blogContent = document.createElement('p');
+                blogContent.textContent = blog.content;
+
+                if (blog.image) {
+                    const blogImage = document.createElement('img');
+                    blogImage.src = blog.image;
+                    blogCard.appendChild(blogImage);
+                }
+
+                blogCard.appendChild(blogTitle);
+                blogCard.appendChild(blogContent);
+                blogsContainer.appendChild(blogCard);
+            });
+        }
+    </script>
+</body>
+</html>

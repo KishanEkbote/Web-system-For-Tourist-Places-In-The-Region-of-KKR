@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Page</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header, footer {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        header nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        header nav ul li {
+            display: inline;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        header nav ul li a:hover {
+            color: #d1ecff;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        section {
+            margin-bottom: 20px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #007bff;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 0;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 1rem;
+        }
+
+        form button {
+            align-self: flex-start;
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        form button:hover {
+            background-color: #0056b3;
+        }
+
+        #blogs-container {
+            display: grid;
+            gap: 20px;
+        }
+
+        .blog-card {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .blog-card img {
+            max-width: 100%;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            main {
+                padding: 10px;
+            }
+
+            header nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Traveler's Blog</h1>
+        <nav>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="myblogs.html">My Blogs</a></li>
+                <li><a href="index.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="user-profile">
+            <h2>Welcome, <span id="full-name">Kishan</span>!</h2>
+            <p><strong>Username:</strong> <span id="username">Kishan</span></p>
+            <p><strong>Email:</strong> <span id="email">cuk_stud@gmail.com</span></p>
+        </section>
+
+        <section id="blog-section"> 
+            <h2>Write a Blog</h2>
+            <form id="blog-form">
+                <input type="text" id="blog-title" placeholder="Blog Title" required>
+                <textarea id="blog-content" placeholder="Write your blog here..." required></textarea>
+                <input type="file" id="blog-image" accept="image/*">
+                <button type="submit">Publish</button>
+            </form>
+        </section>
+    </main>
+    <script>
+        document.getElementById('blog-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const title = document.getElementById('blog-title').value;
+            const content = document.getElementById('blog-content').value;
+            const image = document.getElementById('blog-image').files[0];
+
+            const blogContainer = document.getElementById('blogs-container');
+
+            const blogCard = document.createElement('div');
+            blogCard.classList.add('blog-card');
+
+            const blogTitle = document.createElement('h3');
+            blogTitle.textContent = title;
+
+            const blogContent = document.createElement('p');
+            blogContent.textContent = content;
+
+            if (image) {
+                const blogImage = document.createElement('img');
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    blogImage.src = e.target.result;
+                }
+                reader.readAsDataURL(image);
+                blogCard.appendChild(blogImage);
+            }
+
+            blogCard.appendChild(blogTitle);
+            blogCard.appendChild(blogContent);
+
+            blogContainer.appendChild(blogCard);
+
+            // Clear form
+            document.getElementById('blog-form').reset();
+        });
+    </script>
+</body>
+</html>

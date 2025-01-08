@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<title>Blog Layout</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<style>
+    * {
+        box-sizing: border-box;
+      }
+      
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        background: #f1f1f1;
+      }
+      
+      .header {
+        background-image: url('');
+        background-size: cover;
+        background-position: center;
+        text-align: center;
+        color: #333;
+        padding: 30px 10px;
+    }
+    
+    .header h1 {
+        font-size: 3em;
+        margin-bottom: 5px;
+    }
+    
+    .header p {
+        font-size: 1.2em;
+    }
+    .cta-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 30px;
+      background-color: #007bff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+  }
+
+  .cta-button1 {
+      display: inline-block;
+      margin-top: 50px;
+      padding: 10px 30px;
+      background-color: #007bff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+  }
+      .leftcolumn {
+        float: left;
+        width: 75%;
+      }
+      
+      .rightcolumn {
+        float: right;
+        width: 25%;
+        padding-left: 20px;
+      }
+      
+      .card {
+        background-color: white;
+        padding: 20px;
+        margin-top: 20px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+      }
+      
+      .blog-image, .sidebar-image {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+      }
+      
+      .read-more {
+        display: inline-block;
+        margin-top: 10px;
+        font-weight: bold;
+        color: #007bff;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+      
+      .read-more:hover {
+        color: #0056b3;
+      }
+      
+      .fakeimg {
+        background-color: #ccc;
+        width: 100%;
+        padding: 20px;
+        margin-top: 10px;
+        text-align: center;
+      }
+      
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      
+      /* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f9;
+}
+
+header {
+  text-align: center;
+  padding: 10px;
+  background-color: #dce0e4;
+  color: white;
+}
+
+header h1 {
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.1rem;
+}
+
+/* Blog Section */
+.blog-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.blog-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.blog-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.blog-content {
+  padding: 15px;
+}
+
+.blog-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.blog-content p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.read-more {
+  display: inline-block;
+  text-decoration: none;
+  color: #0078D7;
+  font-weight: bold;
+  border: 1px solid #0078D7;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.read-more:hover {
+  background: #0078D7;
+  color: white;
+}
+      /* Gallery Section */
+      .gallery-section {
+        padding: 40px 0;
+        text-align: center;
+      }
+      
+      .gallery-section h2 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+      }
+      
+      .gallery-grid {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+      }
+      
+      .gallery-card {
+        background-color: #fff;
+        width: 30%;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+      }
+      
+      .gallery-card:hover {
+        transform: translateY(-5px);
+      }
+      
+      .gallery-card img {
+        width: 100%;
+        border-radius: 10px;
+        height: 200px;
+        object-fit: cover;
+      }
+      
+      .gallery-info {
+        padding-top: 15px;
+      }
+      
+      .gallery-info h3 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+      }
+      
+      @media screen and (max-width: 800px) {
+        .leftcolumn, .rightcolumn {   
+          width: 80%;
+          padding: 0;
+        }
+      
+        .gallery-grid {
+          flex-direction: column;
+        }
+      
+        .gallery-card {
+          width: 100%;
+        }
+      }
+      .txt {
+        padding: 10px 20px;
+        text-align: center;
+    }
+    
+    .txt h2 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+        color: #333;
+       }
+</style>
+
+<header class="header">
+  <h1>Welcome To Blog Section </h1>
+  <a href="Login_page.html" class="cta-button">Add Your Blog </a>
+</header>
+<div class="txt">
+  <h2></h2>
+</div>
+<main class="blog-section">
+  <article class="blog-card">
+    <img src="Images/KKR Region/img.jpg" alt="Kalaburagi Fort">
+    <div class="blog-content">
+      <h3>Discover the Majesty of Kalaburagi </h3>
+      <p>
+        Kalaburagi Fort is a masterpiece of the Bahmani Sultanate, featuring intricate architecture and a storied past. 
+        A must-visit for history enthusiasts and culture lovers alike.
+      </p>
+      <a href="kalaburagi.html" class="read-more">Read More</a>
+    </div>
+  </article>
+
+  <article class="blog-card">
+    <img src="Images/KKR Region/bidar/bidar.jpg" alt="Bidar Fort">
+    <div class="blog-content">
+      <h3>Discover the Majesty of Bidar </h3>
+      <p>
+        Dive into the rich heritage of Bidar Fort, known for its majestic layout, exquisite gardens, and historic significance that captivates every traveler.
+      </p>
+      <a href="bidar.html" class="read-more">Read More</a>
+    </div>
+  </article>
+  <article class="blog-card">
+    <img src="Images/KKR Region/yadgir/21 Yadgiri District.jpg" alt="Yadgiri">
+    <div class="blog-content">
+      <h3>Discover the Majesty of Yadgir </h3>
+      <p>
+        Dive into the rich heritage of yadgir Fort, known for its majestic layout, exquisite gardens, and historic significance that captivates every traveler.
+      </p>
+      <a href="yadgir.html" class="read-more">Read More</a>
+    </div>
+  </article>
+  <article class="blog-card">
+    <img src="Images/KKR Region/Raichur/Raichur_img.jpg" alt="Raichur">
+    <div class="blog-content">
+      <h3>Discover the Majesty of Raichur</h3>
+      <p>
+        Dive into the rich heritage of Bidar Fort, known for its majestic layout, exquisite gardens, and historic significance that captivates every traveler.
+      </p>
+      <a href="raichur.html" class="read-more">Read More</a>
+    </div>
+  </article>
+  <article class="blog-card">
+    <img src="Images/KKR Region/ballari/bb3.jpg" alt="Bellari">
+    <div class="blog-content">
+      <h3>Discover the Majesty of bellari</h3>
+      <p>
+        Dive into the rich heritage of Bidar Fort, known for its majestic layout, exquisite gardens, and historic significance that captivates every traveler.
+      </p>
+      <a href="bellari.html" class="read-more">Read More</a>
+    </div>
+  </article>
+
+  <article class="blog-card">
+    <img src="Images/KKR Region/Vijayanagar/HAMPI-Vijayanagara-1.jpg" alt="Yadgir Hills">
+    <div class="blog-content">
+      <h3>Discover the Majesty of Vijayanagar</h3>
+      <p>
+        Escape the chaos and immerse yourself in the tranquility of Yadgir Hills, a perfect spot for trekking and breathtaking views.
+      </p>
+      <a href="vijayanagar.html" class="read-more">Read More</a>
+    </div>
+  </article>
+</main>
+<div class="gallery-section">
+  <div class="gallery-grid">
+    <div class="gallery-card">
+      <img src="Images/KKR Region/img4.jpg" alt="places">
+      <div class="gallery-info">
+        <h3>Adventure Parks</h3>
+        <p>An adventure park is a place which can contain a wide variety of elements, including but not limited to, rope climbing exercises, obstacle courses, bouldering, rock climbing, target oriented activities, and zip-lines. They are usually intended for recreation.</p>
+      </div>
+    </div>
+    <div class="gallery-card">
+      <img src="Images/KKR Region/image2.jpg" alt="places">
+      <div class="gallery-info">
+        <h3>Historic Place</h3>
+        <p>A historic site or heritage site is an official location where pieces of political, military, cultural, or social history have been preserved due to their cultural heritage value. .</p>
+      </div>
+    </div>
+    <div class="gallery-card">
+      <img src="Images/KKR Region/ydg_blg.jpg" alt="places">
+      <div class="gallery-info">
+        <h3>Temples</h3>
+        <p>This temple is perhaps the only known shrine dedicated to the Goddess of reflections and shadows. However, unique temples abound along the banks of the Krishna River, especially in this region.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

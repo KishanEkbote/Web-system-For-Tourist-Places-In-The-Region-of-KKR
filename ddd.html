@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.main{
+  height: 50%;
+  margin-left:30%;
+  width:40%;
+  border-radius: 2%;
+}
+img {
+  vertical-align: middle;
+  
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+</style>
+<body>
+
+<h2 style="text-align:center"><b><u>BIDAR PLACES</u></b></h2>
+
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img class="main" src="Images/KKR Region/bidar/bid-1.jpg" >
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img class="main" src="Images/KKR Region/bidar/bid-4.jpg" >
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img class="main" src="Images/KKR Region/bidar/bid-2.jpg" >
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img class="main" src="Images/KKR Region/bidar/bid-4.jpg" >
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img class="main" src="Images/KKR Region/bidar/bid-3.jpg" >
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img class="main" src="Images/KKR Region/bidar/bid-2.jpg" >
+  </div>
+  &nbsp;
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+  
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="Images/KKR Region/bidar/bid-4.jpg" style="width:100%" onclick="currentSlide(1)" alt="Bidar Fort">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Images/KKR Region/bidar/bid-2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Bidar Fort">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Images/KKR Region/bidar/bid-1.jpg" style="width:100%" onclick="currentSlide(3)" alt="Bidar Fort">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Images/KKR Region/bidar/bid-4.jpg" style="width:100%" onclick="currentSlide(4)" alt="Bidar Fort">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Images/KKR Region/bidar/bid-3.jpg" style="width:100%" onclick="currentSlide(5)" alt="Bidar Fort">
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="Images/KKR Region/bidar/bid-2.jpg" style="width:100%" onclick="currentSlide(6)" alt="Bidar Fort">
+    </div>
+  </div>
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+<div id="hotspots-map-container-128538"
+    class="hotspots-map-container leaflet-container leaflet-touch leaflet-retina leaflet-fade-anim"
+    style="width: 495px; height: 772px;">
+    <div class="leaflet-pane leaflet-map-pane" style="transform: translate3d(0px, 0px, 0px);">
+        <div class="leaflet-pane leaflet-tile-pane"></div>
+        <div class="leaflet-pane leaflet-shadow-pane"></div>
+        <div class="leaflet-pane leaflet-overlay-pane"><img class="leaflet-image-layer leaflet-zoom-animated"
+                src="https://karnatakatourism.org/wp-content/uploads/2022/09/Group-812-3.png" alt=""
+                style="z-index: 1; transform: translate3d(0px, 0px, 0px); width: 495px; height: 772px;"><svg
+                pointer-events="none" class="leaflet-zoom-animated" width="594" height="926" viewBox="-49 -77 594 926"
+                aria-labelledby="img-title-128538" aria-describedby="img-desc-128538" role="group"
+                style="transform: translate3d(-49px, -77px, 0px);">
+                <title id="img-title-128538">Explore the Districts of Karnataka</title>
+<path class="hotspot-default leaflet-interactive" stroke="#3388ff" stroke-opacity="1"
+stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="#3388ff"
+fill-opacity="0.2" fill-rule="evenodd"
+d="M348 28L351 25L343 31L336 27L331 30L327 37L333 40L326 49L329 57L319 60L316 63L311 61L305 64L312 70L305 76L300 89L316 90L325 93L331 86L340 88L346 93L364 93L373 96L377 84L377 78L388 72L386 65L395 54L397 48L388 38L393 33L393 26L387 10L382 14L380 8L383 2L375 0L369 1L364 4L359 10L356 23z"
+tabindex="0" aria-label="Bidar" name="Bidar" role="listitem"></path>
+<path class="hotspot-default leaflet-interactive" stroke="#3388ff" stroke-opacity="1"
+stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="#3388ff"
+fill-opacity="0.2" fill-rule="evenodd"
+d="M317 90L301 89L299 82L293 75L291 82L287 75L273 88L269 95L261 95L264 103L260 110L269 121L265 127L251 121L244 123L237 121L231 126L231 132L237 138L248 145L262 143L263 151L268 155L269 161L266 169L273 170L271 176L277 178L272 185L265 182L263 185L268 187L264 191L271 191L283 187L297 185L308 181L313 175L331 176L339 169L344 172L356 163L365 166L376 167L380 155L380 142L368 138L368 131L375 125L378 114L385 111L393 104L400 102L401 98L395 93L385 92L381 95L377 87L371 97L363 92L351 93L338 87L332 86L325 93z"
+tabindex="0" aria-label="Kalaburgi" name="Kalaburgi" role="listitem" style=""></path>
+<path class="hotspot-default leaflet-interactive" stroke="#3388ff" stroke-opacity="1"
+stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="#3388ff"
+fill-opacity="0.2" fill-rule="evenodd"
+d="M175 110L177 115L173 121L187 138L179 145L185 152L186 161L181 169L179 162L167 170L160 164L152 167L152 174L158 192L168 190L167 203L169 211L162 223L168 226L176 223L215 235L216 246L227 252L235 250L246 257L252 258L263 253L257 246L258 230L271 228L268 205L273 198L272 190L264 190L268 185L263 181L268 179L273 183L276 179L271 175L275 171L268 169L270 153L264 155L265 148L261 144L247 144L233 133L228 125L216 125L209 117L200 114L197 124L194 117L181 109z"
+tabindex="0" aria-label="Vijayapura" name="Vijayapura" role="listitem"></path>
+<path class="hotspot-default leaflet-interactive" stroke="#3388ff" stroke-opacity="1"
+stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="#3388ff"
+fill-opacity="0.2" fill-rule="evenodd"
+d="M267 189L297 184L311 180L317 171L331 176L343 166L347 169L357 162L364 167L377 165L378 181L373 181L377 190L375 196L376 203L371 204L370 211L364 214L353 216L363 227L339 219L333 212L329 212L329 220L321 218L317 226L307 229L260 250L256 242L259 233L269 226L267 206L273 197z"
+tabindex="0" aria-label="Yadgiri" name="Yadgiri" role="listitem"></path>
+<path class="hotspot-default leaflet-interactive" stroke="#3388ff" stroke-opacity="1"
+stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="#3388ff"
+fill-opacity="0.2" fill-rule="evenodd"
+d="M267 247L303 229L315 225L319 219L329 216L331 211L336 211L335 216L343 218L359 227L381 228L391 234L384 236L379 241L380 248L378 255L381 276L340 275L319 294L309 308L301 325L286 312L273 304L275 296L268 288L260 291L255 286L259 283L257 277L251 271L254 266L245 264L252 259z"
+tabindex="0" aria-label="Raichur" name="Raichur" role="listitem" style=""></path>
+<path class="hotspot-default leaflet-interactive hotspot-active" stroke="#3388ff" stroke-opacity="1"
+stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="#3388ff"
+fill-opacity="0.2" fill-rule="evenodd"
+d="M255 345L278 338L283 345L280 354L287 357L283 363L277 360L271 354L267 363L276 375L273 377L267 371L263 382L275 396L292 391L293 402L289 416L281 434L273 434L260 423L251 422L248 425L243 421L237 421L232 425L237 431L233 439L229 442L223 441L199 422L200 418L195 418L193 414L188 410L189 402L192 394L199 393L204 386L212 385L215 381L213 376L219 374L227 374L247 358z"
+tabindex="0" aria-label="Vijayanagara" name="Vijayanagara" role="listitem" style=""></path>
+<path class="hotspot-default leaflet-interactive" stroke="#3388ff" stroke-opacity="1"
+stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="#3388ff"
+fill-opacity="0.2" fill-rule="evenodd"
+d="M223 278L226 274L231 275L230 282L236 287L243 282L251 282L259 290L266 285L273 292L271 298L275 305L281 308L291 317L301 321L301 327L252 349L239 366L228 373L220 373L216 364L213 348L217 346L211 338L205 338L205 331L212 328L211 322L216 317L212 308L218 306L219 313L224 312L225 308L228 305L226 300L219 299L213 296L205 287L197 285L201 280L214 283L225 291L224 284z"
+tabindex="0" aria-label="Koppal" name="Koppal" role="listitem" style=""></path>
+<path class="hotspot-default leaflet-interactive" stroke="#3388ff" stroke-opacity="1"
+stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="#3388ff"
+fill-opacity="0.2" fill-rule="evenodd"
+d="M316 376L311 378L305 372L299 371L301 382L291 381L294 386L292 393L278 397L271 396L270 388L262 381L266 371L272 376L276 374L264 360L270 356L277 361L289 357L282 354L283 346L277 339L286 334L299 331L309 310L331 284L329 300L339 305L329 307L333 305L326 314L326 323L322 324L328 342L334 340L341 349L337 352L344 358L340 363L340 369L331 381L325 377z"
+tabindex="0" aria-label="Ballari" name="Ballari" role="listitem"></path>
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery Slideshow</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f3f3f3;
+    }
+    .gallery-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      overflow: hidden;
+      background-color: #111;
+    }
+    .slideshow {
+      position: relative;
+      width: 80%;
+      max-width: 900px;
+      aspect-ratio: 16/9;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    }
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+    .slide {
+      min-width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      transition: opacity 1s ease-in-out;
+    }
+    .controls {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+    .controls button {
+      background-color: rgba(0, 0, 0, 0.5);
+      border: none;
+      color: white;
+      font-size: 24px;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 50%;
+      transition: background-color 0.3s;
+    }
+    .controls button:hover {
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+    .indicators {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 10px;
+    }
+    .dot {
+      width: 12px;
+      height: 12px;
+      background-color: rgba(255, 255, 255, 0.5);
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .dot.active {
+      background-color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="gallery-container">
+    <div class="slideshow">
+      <div class="slides">
+        <div class="slide" style="background-image: url('Images/KKR Region/Klb/kalaburgi.jpg');"></div>
+        <div class="slide" style="background-image: url('Images/KKR Region/Klb/kalaburgi.jpg');"></div>
+        <div class="slide" style="background-image: url('Images/KKR Region/Klb/kalaburgi.jpg');"></div>
+        <div class="slide" style="background-image: url('Images/KKR Region/Klb/kalaburgi.jpg');"></div>
+      </div>
+      <div class="controls">
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+      </div>
+      <div class="indicators">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function changeSlide(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      const slides = document.querySelectorAll('.slide');
+      const dots = document.querySelectorAll('.dot');
+
+      if (n > slides.length) slideIndex = 1;
+      if (n < 1) slideIndex = slides.length;
+
+      slides.forEach(slide => slide.style.display = 'none');
+      dots.forEach(dot => dot.classList.remove('active'));
+
+      slides[slideIndex - 1].style.display = 'block';
+      dots[slideIndex - 1].classList.add('active');
+    }
+
+    // Auto slideshow
+    setInterval(() => {
+      changeSlide(1);
+    }, 5000);
+  </script>
+</body>
+</html> -->

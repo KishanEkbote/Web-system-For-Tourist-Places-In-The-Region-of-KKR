@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karnataka Tourism - Home</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Navbar Styling */
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #f5f6f7;
+            padding: 1rem 2rem;
+            color: rgb(14, 13, 13);
+            font-family: Arial, sans-serif;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        ul {
+            display: flex;
+            list-style: none;
+        }
+
+        ul li {
+            position: relative;
+            margin-left: 2rem;
+        }
+
+        ul li a {
+            color: rgb(10, 10, 10);
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        ul li a:hover {
+            color: #e01717;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #99d6eb;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .login-button {
+            padding: 0.6rem 1.6rem;
+            margin-left: 2rem;
+            background-color: #f4b13d;
+            color: #030303;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none;
+        }
+
+        .login-button:hover {
+            background-color: #ffd600;
+        }
+
+        /* Banner Styling */
+        .banner {
+            width: 100%;
+            height: 50vh;
+            background-image: url('banner.jpg'); /* Replace with your banner image */
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Gallery Styling */
+        .gallery-section {
+            padding: 2rem;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .gallery-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .gallery img {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #f5f6f7;
+            padding: 1rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: rgb(14, 13, 13);
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Karnataka Tourism</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">KK Region</a>
+                <div class="dropdown-content">
+                    <a href="kalaburagi.html">Kalaburagi</a>
+                    <a href="ballari.html">Ballari</a>
+                    <a href="bidar.html">Bidar</a>
+                    <a href="koppal.html">Koppal</a>
+                    <a href="raichur.html">Raichur</a>
+                    <a href="yadgir.html">Yadgir</a>
+                    <a href="vijayanagar.html">Vijayanagar</a>
+                </div>
+            </li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="accommodation.html">Accommodation</a></li>
+            <li><a href="itinerary.html">Itinerary Planning</a></li>
+            <li><a href="blogs.html">Blogs</a></li>
+        </ul>
+        <a href="login.html" class="login-button">Login</a>
+    </nav>
+
+    <!-- Banner Section -->
+    <section class="banner">
+        Welcome to Karnataka Tourism
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <h2>Explore the Beauty of Karnataka</h2>
+        <div class="gallery">
+            <img src="kalaburagi.jpg" alt="Kalaburagi">
+            <img src="ballari.jpg" alt="Ballari">
+            <img src="bidar.jpg" alt="Bidar">
+            <img src="koppal.jpg" alt="Koppal">
+            <img src="raichur.jpg" alt="Raichur">
+            <img src="yadgir.jpg" alt="Yadgir">
+            <img src="vijayanagar.jpg" alt="Vijayanagar">
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Karnataka Tourism. All Rights Reserved.
+    </footer>
+
+</body>
+</html>

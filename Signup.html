@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #a18cd1, #fbc2eb);
+        }
+
+        /* Container Styling */
+        .container {
+            width: 400px;
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        /* Tabs Styling */
+        .tabs {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
+        }
+
+        .tab {
+            flex: 1;
+            padding: 0.5rem;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            border: none;
+            background-color: #e0e0e0;
+            border-radius: 100px;
+            transition: background-color 0.5s;
+        }
+
+        .tab.active {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        /* Form Styling */
+        .form {
+            display: none;
+        }
+
+        .form.active {
+            display: block;
+        }
+
+        .form input {
+            width: 100%;
+            padding: 0.8rem;
+            margin: 0.5rem 0;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 1rem;
+        }
+
+        .form a {
+            font-size: 0.9rem;
+            color: #007bff;
+            text-decoration: none;
+            margin: 0.5rem 0;
+            display: inline-block;
+        }
+
+        .form a:hover {
+            text-decoration: underline;
+        }
+
+        .form button {
+            width: 100%;
+            padding: 0.8rem;
+            font-size: 1rem;
+            font-weight: bold;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .form button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Additional Links */
+        .login-link {
+            font-size: 0.9rem;
+            margin-top: 1rem;
+            color: #555;
+        }
+
+        .login-link a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Create Account</h2>
+        &nbsp;
+        <div class="tabs">
+            <button class="tab active" onclick="showForm('user-signup')">User Signup</button>
+            <button class="tab" onclick="showForm('admin-signup')">Admin Signup</button>
+        </div>
+        
+        <!-- User Signup Form -->
+        <form id="user-signup" class="form active">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <input type="password" placeholder="Password" required>
+            <input type="password" placeholder="Confirm Password" required>
+            <button type="submit">Signup</button>
+            <p class="login-link">Already have an account? <a href="Login_page.html">Login now</a></p>
+        </form>
+
+        <!-- Admin Signup Form -->
+        <form id="admin-signup" class="form">
+            <input type="text" placeholder="Admin Name" required>
+            <input type="email" placeholder="Admin Email" required>
+            <input type="password" placeholder="Password" required>
+            <input type="password" placeholder="Confirm Password" required>
+            <button type="submit">Signup</button>
+            <p class="login-link">Already have an account? <a href="Login_page.html">Login now</a></p>
+        </form>
+    </div>
+
+    <script>
+        // JavaScript for Tab Functionality
+        function showForm(formId) {
+            // Remove active class from all tabs
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+
+            // Hide all forms and remove active class
+            document.querySelectorAll('.form').forEach(form => {
+                form.classList.remove('active');
+            });
+
+            // Show selected form and add active class to the tab
+            document.getElementById(formId).classList.add('active');
+            document.querySelector(`[onclick="showForm('${formId}')"]`).classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
